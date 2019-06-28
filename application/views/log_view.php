@@ -165,7 +165,7 @@
             var table2   =   $("#myTableProduksi").dataTable({
                 initComplete : function(){
                     var api = this.api();
-                    $('#myTable_filter input')
+                    $('#myTableProduksi_filter input')
                         .off('.DT')
                         .on('input.DT',function(){
                             api.search(this.value).draw();
