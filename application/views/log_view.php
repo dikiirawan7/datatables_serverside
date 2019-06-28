@@ -60,6 +60,7 @@
                     <table class="table table-striped table-hover" id="myTable">
                     <thead class="thead-dark">
                         <tr>
+                            <th></th>
                             <th class="col-md-4">Nomor Aju</th>
                             <th class="col-md-4">Keterangan</th>
                             <th class="col-md-4">kondisi</th>
@@ -129,8 +130,9 @@
                 },
                 columns     :   [
                     
-                    {"data" :   "nomer_aju"},
-                    {"data" :   "keterangan","searchable":false},
+                    {"data" :   "id", "visible": false},
+                    {"data" :   "nomer_aju","orderable":false},
+                    {"data" :   "keterangan","searchable":false,"orderable":false},
                     {"data" :   "kondisi",
                         "render" : function(data){
                             if(data==="sukses"){
@@ -143,7 +145,7 @@
                         }
                     },
                 ],
-                order       :   [[1,'desc']],
+                order       :   [[0,'desc']],
                 rowCallback :   function(row,data,iDisplayIndex){
                     var info    =   this.fnPagingInfo();
                     var page    =   info.Ipage;
@@ -154,6 +156,9 @@
 
 
             });
+            setTimeout(function(){// wait for 5 secs(2)
+           location.reload(); // then reload the page.(3)
+            }, 5000);
 
             //table produksi
             var table2   =   $("#myTableProduksi").dataTable({
