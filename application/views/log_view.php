@@ -156,9 +156,10 @@
 
 
             });
-            setTimeout(function(){// wait for 5 secs(2)
-           location.reload(); // then reload the page.(3)
-            }, 5000);
+            //timer 15 menit
+            setTimeout(function(){
+           location.reload(); 
+            }, 900000);
 
             //table produksi
             var table2   =   $("#myTableProduksi").dataTable({
