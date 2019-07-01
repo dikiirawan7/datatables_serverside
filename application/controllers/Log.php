@@ -13,6 +13,24 @@ class Log extends CI_Controller{
         $data=$this->log_model->get_all_log();
         echo $data;
     }
+
+    function getMinute(){
+        $menit=date('i');
+        
+        $y=0;
+        for($i=0;$i<=60;$i++){
+            if($y<=60){
+                if($y==$menit){
+                    echo "siap";
+                }
+
+            }
+            else{
+                break;
+            }
+            $y=$y+5;
+        }
+    }
 }
 
 ?>

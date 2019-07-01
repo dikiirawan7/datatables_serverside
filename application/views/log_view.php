@@ -156,10 +156,12 @@
 
 
             });
+
+            
             //timer 15 menit
             setTimeout(function(){
            location.reload(); 
-            }, 900000);
+            }, 5000);
 
             //table produksi
             var table2   =   $("#myTableProduksi").dataTable({
